@@ -1,0 +1,365 @@
+/*Estilos generales*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+:root{
+    --color-acento: rgb(213, 166, 36);
+    --color-contraste: rgb(42,42,58);
+    --color-comp:#6B5C32;
+    --color-sombra: #9E780D;
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1{ font-size: 3em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+h4{ font-size: 1.5em;}
+p{ font-size: 1.25em;}
+
+a{
+    text-decoration: none;
+    color:  var(--color-acento);
+}
+
+button{
+    border-radius: 5px;
+    border: 1px solid rgb(0,0,0,0.5);
+    margin-left: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px rgb(0,0,0,0.5) ;
+    color:white ;
+    background-color: var(--color-acento);
+}
+
+button:hover{
+    background-color: var(--color-sombra);
+}
+
+a:hover{
+    color: var(--color-sombra);
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+}
+
+/*Header*/
+
+header{
+    background-color: rgb(245, 245, 245);
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo{
+    font-size: 2.5em;
+    padding: 20px;
+}   
+header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+/*Hero*/
+
+#hero{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    color: white;
+    background-image:  linear-gradient(
+        0deg,
+        rgb(0,0,0,0.2),
+        rgb(0,0,0,0.2)
+        ),url("media/cafe-anim.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    -webkit-text-stroke: 0.1px rgba(216, 215, 215, 0.217);
+}
+
+#hero h1{
+    text-align: center;
+}
+
+#hero .arrow-H{
+    margin-top: 10vh;
+    transition: margin-top .5s ease-in-out;
+   
+}
+
+
+/*Conocenos*/
+
+
+#conocenos .container{
+    text-align: center;
+    padding: 125px 12px;
+    
+}
+
+#conocenos h2{
+    color: var(--color-acento);
+}
+
+
+
+/* Ubicaciones */
+
+#ubicaciones h2{
+    text-align: center;
+    color: var(--color-acento);
+}
+#ubicaciones .list{
+    width: 100%;
+    padding: 0;
+    
+}
+#ubicaciones .list-item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+#ubicaciones .list-button{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    padding-left: 100px;
+    gap: 40px;
+    border-bottom: 2px solid grey;
+}
+#ubicaciones .link{
+    color: black;
+    font-size: 1.5em;
+}
+#ubicaciones .list-button:hover{
+    background: rgb(191, 191, 191);
+}
+#ubicaciones .arrow .list-arrow{
+    transform: rotate(-90deg);
+}
+#ubicaciones .list-arrow{
+    margin-left: auto;
+    transition: transform .3s;
+    margin-right: 100px;
+}
+#ubicaciones .mapa{
+    width: 80%;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
+#ubicaciones .mapa-texto{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+    text-align: left;
+    color: var(--color-acento);
+}
+#ubicaciones iframe{
+    margin-top: 30px;
+}
+
+
+/* Carta */
+
+#carta{
+    margin-top: 90px;
+    background-color: var(--color-contraste);
+    padding-bottom: 90px;
+}
+
+#carta h2{
+    text-align: center;
+    padding-top: 90px;
+    color: var(--color-acento);
+    margin-top: 0px;
+}
+
+#carta .list{
+    padding: 0;
+    margin-top: 90px;
+    padding-bottom: 30px;
+}
+
+#carta .list-item{
+    list-style: none;
+    margin-left: 20px;
+    width: 100%;
+    cursor: pointer; 
+}   
+
+#carta .item-button:hover{
+    color: var(--color-sombra);
+}
+
+#carta .menu{
+    width: 80%;
+    border-left: .5px solid #303440;
+    list-style: none;
+    transition: height .4s;
+    overflow: hidden;
+    height: 0;
+    padding-left: 30px;
+}
+
+#carta .menu-item{
+    margin: 5px 0px;
+    width: 280px;
+}
+#carta .menu-item-text{
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+
+
+
+/* A Domicilio */
+
+#domicilio{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#domicilio h3{
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: var(--color-acento);
+}
+
+#domicilio h4{
+    margin-top: 0;
+    color: var(--color-acento);
+}
+
+#domicilio a{
+    margin-bottom: 80px;
+}
+#domicilio button{
+    margin: 0;
+    background-color: var(--color-contraste);
+    color: rgb(240, 240, 240);
+
+
+}
+/* Footer */
+footer{
+    background-color: var(--color-contraste);
+}
+footer .container{
+    padding: 60px 0px 0px 0px;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-items: center;
+    
+}
+footer .copy{
+    display: flex;
+    justify-content: center;
+
+}
+footer .socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .copy p{
+    margin: 0;
+    color: rgb(130, 130, 130);
+    padding: 15px;
+
+}
+footer .socials p{
+    margin-top: 0;
+    color: rgb(130, 130, 130);
+    font-size: 1.25em;
+}
+
+@media(min-width: 850px){
+    h1{ font-size: 4.2em;}
+    h2{ font-size: 3.5em;}
+    h3{ font-size: 3em;}
+    h4{ font-size: 2.5em;}
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+        gap: 20px;
+    }
+
+    #hero{
+        height: 95vh;
+    }
+    #hero .arrow-H:hover{
+        margin-top: 17vh
+    }
+    #ubicaciones .container{
+        align-items: center;
+    }
+    #ubicaciones .list{
+        width: 70%;
+        margin-left: 15%;
+
+    }
+    #ubicaciones .list-item{
+        padding-top: 40px;
+    }
+
+    #carta .list{
+        margin-left: 80px;
+    }
+    #carta .menu{
+        margin-left: 80px;
+    }
+    #carta .item-button{
+        font-size: 1.5em;
+    }
+    footer .copy{
+        display: flex;
+        justify-content: center;
+         align-self: flex-end; 
+    }
+    footer .copy p{
+        margin: 0;
+        color: rgb(130, 130, 130);
+        padding: 15px;
+        margin-right: 40px;
+    }
+}
